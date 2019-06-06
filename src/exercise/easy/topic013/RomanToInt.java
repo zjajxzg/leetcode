@@ -26,28 +26,38 @@ import java.util.Map;
  */
 public class RomanToInt {
 
+    // 利用map来存储罗马字符和数字的映射关系   处理小的数在大的数左边的特殊情况
     public static int romanToInt1(String s) {
-        Map<String, Integer> map = new HashMap<>(7);
-        map.put("I", 1);
-        map.put("V", 5);
-        map.put("X", 10);
-        map.put("L", 50);
-        map.put("C", 100);
-        map.put("D", 500);
-        map.put("M", 1000);
+        Map<Character, Integer> map = new HashMap<>(7);
+        map.put('I', 1);
+        map.put('V', 5);
+        map.put('X', 10);
+        map.put('L', 50);
+        map.put('C', 100);
+        map.put('D', 500);
+        map.put('M', 1000);
 
         int x = 0;
-        for (int i = 0; i < s.length(); i++) {
-            for (String key : map.keySet()) {
-                if (key.equals(String.valueOf(s.charAt(i)))) {
-                  x += map.get(key);
-                }
+        int a = 0;
+        int b = 0;
+        if (s.length() == 1) {
+            return map.get(s.charAt(0));
+        }
+        for (int i = 0; i < s.length() - 1; i++) {
+            a = map.get(s.charAt(i));
+            b = map.get(s.charAt(i + 1));
+            x += a;
+            if (i == s.length() - 2) {
+                x += b;
+            }
+            if (a < b) {
+                x -= 2 * a;
             }
         }
         return x;
     }
 
     public static void main(String[] args) {
-        System.out.println(romanToInt1("VI"));
+        System.out.println(romanToInt1("IV"));
     }
 }
