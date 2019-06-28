@@ -7,23 +7,23 @@ import java.util.Arrays;
  * 所有的偶数位于数组的后半部分，并保证奇数和奇数，偶数和偶数之间的相对位置不变。
  */
 public class ReOrderArray {
-    public static void reOrderArray1(int [] array) {
-        for (int i = 0; i < array.length; i++) {
-            for (int j = i + 1; j < array.length; j++ ) {
-                if (array[i] % 2 == 0) {
-                    if (array[j] % 2 == 1) {
-                        int temp;
-                        temp = array[i];
-                        array[i] = array[j];
-                        array[j] = temp;
-                        break;
-                    }
-
-                }
-            }
-
-        }
-    }
+//    public static void reOrderArray1(int [] array) {
+//        for (int i = 0; i < array.length; i++) {
+//            for (int j = i + 1; j < array.length; j++ ) {
+//                if (array[i] % 2 == 0) {
+//                    if (array[j] % 2 == 1) {
+//                        int temp;
+//                        temp = array[i];
+//                        array[i] = array[j];
+//                        array[j] = temp;
+//                        break;
+//                    }
+//
+//                }
+//            }
+//
+//        }
+//    }
 
     public static void reOrderArray2(int[] array) {
         int[] a = new int[array.length];

@@ -5,6 +5,7 @@ package exercise.swordoffer._012;
  */
 public class Power {
 
+    // TODO 快速幂
     public static double power(double base, int exponent) {
         return Math.pow(base, exponent);
     }
