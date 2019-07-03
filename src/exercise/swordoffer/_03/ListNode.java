@@ -7,4 +7,13 @@ public class ListNode {
     public ListNode(int val) {
         this.val = val;
     }
+
+//    @Override
+//    public String toString() {
+//        StringBuffer
+//        StringBuilder SB = new StringBuilder();
+//        while (this.next != null) {
+//
+//        }
+//    }
 }

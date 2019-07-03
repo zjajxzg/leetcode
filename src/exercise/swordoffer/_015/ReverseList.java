@@ -7,13 +7,6 @@ import exercise.swordoffer._03.ListNode;
  */
 public class ReverseList {
     public static ListNode reverseList(ListNode head) {
-//        if (head == null) {
-//            return null;
-//        }
-//        while (head.next != null) {
-//            head = head.next;
-//        }
-
         ListNode pre = null;
         ListNode next = null;
         while (head != null) {
@@ -28,6 +21,7 @@ public class ReverseList {
     public static void main(String[] args) {
         ListNode head = new ListNode(1);
         head.next = new ListNode(2);
+        head.next = new ListNode(3);
         System.out.println(reverseList(head));
     }
 }
