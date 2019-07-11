@@ -8,12 +8,13 @@ public class ListNode {
         this.val = val;
     }
 
-//    @Override
-//    public String toString() {
-//        StringBuffer
-//        StringBuilder SB = new StringBuilder();
-//        while (this.next != null) {
-//
-//        }
-//    }
+    @Override
+    public String toString() {
+        StringBuilder sb = new StringBuilder();
+        while (this.next != null) {
+            sb.append(new StringBuilder(String.valueOf(this.val)));
+            this.next = this.next.next;
+        }
+        return sb.toString();
+    }
 }
