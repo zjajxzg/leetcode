@@ -8,6 +8,22 @@ package exercise.hot100._461;
  * 注意：
  * 0 ≤ x, y < 2^31.
  *
+ * 示例:
+ *
+ * 输入: x = 1, y = 4
+ *
+ * 输出: 2
+ *
+ * 解释:
+ * 1   (0 0 0 1)
+ * 4   (0 1 0 0)
+ *        ↑   ↑
+ *
+ * 上面的箭头指出了对应二进制位不同的位置。
+ *
+ * 来源：力扣（LeetCode）
+ * 链接：https://leetcode-cn.com/problems/hamming-distance
+ * 著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。
  */
 public class HammingDistance {
 
@@ -18,7 +34,7 @@ public class HammingDistance {
      * @return
      */
     public int hammingDistance(int x, int y) {
-        return 0;
+
     }
 
     public static void main(String[] args) {
