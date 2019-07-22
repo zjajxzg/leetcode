@@ -14,7 +14,7 @@ import java.util.Arrays;
 public class TwoSum {
 
     /**
-     * O(n2)
+     * 暴力解法O(n2)
      * @param nums
      * @param target
      * @return
@@ -30,10 +30,29 @@ public class TwoSum {
         return null;
     }
 
+//    /**
+//     * 双指针   先排序  头尾两指针的和大于target（这里不适用 排序之后index变了）
+//     * @param nums
+//     * @param target
+//     * @return
+//     */
+//    public int[] twoSum2(int[] nums, int target) {
+//        Arrays.sort(nums);
+//        for (int i = 0, j = nums.length - 1; i < j; i++) {
+//            while (nums[i] + nums[j] > target) {
+//                j--;
+//            }
+//            if (nums[i] + nums[j] == target) {
+//                return new int[]{i, j};
+//            }
+//        }
+//        return null;
+//    }
+
     public static void main(String[] args) {
         TwoSum a = new TwoSum();
-        int[] nums = {1, 2};
-        int target = 3;
+        int[] nums = {3, 2, 4};
+        int target = 6;
         System.out.println(Arrays.toString(a.twoSum1(nums, target)));
     }
 }

@@ -19,6 +19,11 @@ import java.util.List;
  * ]
  */
 public class ThreeSum {
+    /**
+     * 暴力   超时
+     * @param nums
+     * @return
+     */
     public static List<List<Integer>> threeSum(int[] nums) {
         Arrays.sort(nums);
         List<List<Integer>> result = new ArrayList<>();
@@ -44,6 +49,17 @@ public class ThreeSum {
         return result;
     }
 
+//    public static List<List<Integer>> threeSum1(int[] nums) {
+//        Arrays.sort(nums);
+//        List<List<Integer>> result = new ArrayList<>();
+//        for (int i = 0, j = nums.length - 1; i < j; i++ ) {
+//            while () {
+//
+//            }
+//        }
+//
+//        return result;
+//    }
 
     public static void main(String[] args) {
         int[] nums = {-1, 0, 1, 2, -1, -4};
