@@ -28,16 +28,22 @@ package exercise.hot100._461;
 public class HammingDistance {
 
     /**
-     * TODO
      * @param x
      * @param y
      * @return
      */
     public int hammingDistance(int x, int y) {
-
+        // 异或之后题目就变成了求1的个数   剑指offer第十一题
+        int temp = x ^ y;
+        int count = 0;
+        while (temp != 0) {
+            temp = temp & (temp - 1);
+            count++;
+        }
+        return count;
     }
 
     public static void main(String[] args) {
-
+        System.out.println(new HammingDistance().hammingDistance(1, 2));
     }
 }
