@@ -1,5 +1,7 @@
 package exercise.hot100._70;
 
+import java.util.ArrayList;
+
 /**
  * 假设你正在爬楼梯。需要 n 阶你才能到达楼顶。
  *
@@ -45,14 +47,52 @@ public class ClimbStairs {
     }
 
     /**
-     * TODO 动态规划
+     * 递归优化   记忆式搜索  （自顶向下）
+     * @param n
      * @return
      */
-    public int climbStairs2(int n) {
+    public int climbStairs1(int n) {
+        if (n <= 2) {
+            return n;
+        }
+        int[] arr = new int[n];
+
+        if (arr[n-1] == 0) {
+            arr[n-1] = climbStairs1(n-1) + climbStairs1(n-2);
+            return arr[n-1];
+        }
+        return arr[n-1];
 
     }
 
+    /**
+     * 动态规划 （自底向上）
+     * @return
+     */
+    public int climbStairs2(int n) {
+        if (n == 1) {
+            return 1;
+        }
+        if (n == 2) {
+            return 2;
+        }
+        int a = 1;
+        int b = 2;
+        int temp;
+        for (int i = 3; i <= n; i++) {
+            temp = a + b;
+            a = b;
+            b = temp;
+        }
+        return b;
+    }
+
     public static void main(String[] args) {
-        System.out.println(new ClimbStairs().climbStairs(3));
+        long startTime = System.currentTimeMillis();
+        System.out.println(new ClimbStairs().climbStairs1(5));
+        long endTime = System.currentTimeMillis();
+        System.out.println(startTime);
+        System.out.println(endTime);
+        System.out.println(endTime - startTime);
     }
 }
