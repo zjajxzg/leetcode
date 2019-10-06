@@ -11,8 +11,9 @@ public class ListNode {
     @Override
     public String toString() {
         StringBuilder sb = new StringBuilder();
+        sb.append(val);
         while (this.next != null) {
-            sb.append(new StringBuilder(String.valueOf(this.val)));
+            sb.append(",").append(new StringBuilder(String.valueOf(this.next.val)));
             this.next = this.next.next;
         }
         return sb.toString();
