@@ -8,14 +8,10 @@
 - hash 利用hash快速获取值的下标
 #### 链表
 **典型题型：**
-##### 单链表反转
-[https://leetcode-cn.com/problems/reverse-linked-list/][206 反转链表]
+##### 1.单链表反转
+[206. 反转链表](https://leetcode-cn.com/problems/reverse-linked-list/)
 > 思路 1.迭代 2.递归
-##### 链表中环的检测
-##### 两个有序的链表合并
-##### 删除链表倒数第 n 个结点
-##### 求链表的中间结点
-
-
-
-[206 反转链表]: https://leetcode-cn.com/problems/reverse-linked-list/
+##### 2.链表中环的检测
+##### 3.两个有序的链表合并
+##### 4.删除链表倒数第 n 个结点
+##### 5.求链表的中间结点
