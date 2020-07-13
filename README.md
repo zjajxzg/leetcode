@@ -2,14 +2,16 @@
 学习数据结构与算法的过程记录
 
 ### 解题思路总结
-> 暴力解所有
+1. 暴力
+2. 双指针 快慢指针 前后指针
+3. hash 利用hash快速获取值的下标
 #### 数组
-- 双指针 快慢指针 一次遍历解题
-- hash 利用hash快速获取值的下标
+- [01. 两数之和](https://leetcode-cn.com/problems/two-sum/)
+- [11. 盛最多水的容器](https://leetcode-cn.com/problems/container-with-most-water/) 
+- [26. 删除排序数组中的重复项](https://leetcode-cn.com/problems/remove-duplicates-from-sorted-array/) 
+- [27. 移除元素](https://leetcode-cn.com/problems/remove-element/) 
 #### 链表
-**典型题型：**
-##### 1.单链表反转
-[206. 反转链表](https://leetcode-cn.com/problems/reverse-linked-list/)
+- [206. 反转链表](https://leetcode-cn.com/problems/reverse-linked-list/)
 > 思路 1.迭代 2.递归
 ##### 2.链表中环的检测
 ##### 3.两个有序的链表合并
