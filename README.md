@@ -10,7 +10,8 @@
 - [11. 盛最多水的容器](https://leetcode-cn.com/problems/container-with-most-water/) 
 - [26. 删除排序数组中的重复项](https://leetcode-cn.com/problems/remove-duplicates-from-sorted-array/) 
 - [27. 移除元素](https://leetcode-cn.com/problems/remove-element/)
-- [35. 搜索插入位置](https://leetcode-cn.com/problems/search-insert-position/)  
+- [35. 搜索插入位置](https://leetcode-cn.com/problems/search-insert-position/) 
+- [1480. 一维数组的动态和](https://leetcode-cn.com/problems/running-sum-of-1d-array/) 
 #### 链表
 - [206. 反转链表](https://leetcode-cn.com/problems/reverse-linked-list/)
 > 思路 1.迭代 2.递归
