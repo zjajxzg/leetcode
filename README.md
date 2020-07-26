@@ -8,6 +8,7 @@
 #### 数组
 - [01. 两数之和](https://leetcode-cn.com/problems/two-sum/)
 - [11. 盛最多水的容器](https://leetcode-cn.com/problems/container-with-most-water/) 
+- [15. 三数之和](https://leetcode-cn.com/problems/3sum/)
 - [26. 删除排序数组中的重复项](https://leetcode-cn.com/problems/remove-duplicates-from-sorted-array/) 
 - [27. 移除元素](https://leetcode-cn.com/problems/remove-element/)
 - [35. 搜索插入位置](https://leetcode-cn.com/problems/search-insert-position/) 
