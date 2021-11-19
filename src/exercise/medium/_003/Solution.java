@@ -50,7 +50,6 @@ public class Solution {
             return 0;
         }
         int max = 0;
-        // 左指针
         int left = 0;
         // key: 字符 value: index
         Map<Character, Integer> map = new HashMap<>();
@@ -67,10 +66,41 @@ public class Solution {
         return max;
     }
 
-    public static void main(String[] args) {
-        System.out.println(lengthOfLongestSubstring("abcabcbb"));
-        System.out.println(lengthOfLongestSubstring("bbbbb"));
-        System.out.println(lengthOfLongestSubstring("dvdf"));
-        System.out.println(lengthOfLongestSubstring("pwwkew"));
+    /**
+     * 滑动窗口  双指针的思路
+     *
+     * @param s
+     * @return
+     */
+    public static int lengthOfLongestSubstring2(String s) {
+        if (s == null) {
+            return 0;
+        }
+        // 结果
+        int max = 0;
+        // 左指针
+        int left = 0;
+        // key: 字符 value: index
+        Map<Character, Integer> map = new HashMap<>();
+        for (int i = 0; i < s.length(); i++) {
+            char c = s.charAt(i);
+            Integer index = map.get(c);
+            if (index != null) {
+                // 出现重复 左指针后移 重复的索引与当前左指针比较大小
+                left = Math.max(index + 1, left);
+            }
+            // 没有重复 当前窗口-左指针
+            max = Math.max(max, i - left + 1);
+            map.put(c, i);
+        }
+        return max;
     }
+
+        public static void main(String[] args) {
+        System.out.println(lengthOfLongestSubstring2("abcabcbb"));
+        System.out.println(lengthOfLongestSubstring2("bbbbb"));
+        System.out.println(lengthOfLongestSubstring2("dvdf"));
+        System.out.println(lengthOfLongestSubstring2("pwwkew"));
+        System.out.println(lengthOfLongestSubstring2("abba"));
+        }
 }
