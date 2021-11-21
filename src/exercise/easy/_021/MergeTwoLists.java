@@ -1,4 +1,4 @@
-package exercise.easy.topic021;
+package exercise.easy._021;
 
 import exercise.structure.ListNode;
 

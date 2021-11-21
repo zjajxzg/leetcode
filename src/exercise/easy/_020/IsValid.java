@@ -1,4 +1,4 @@
-package exercise.easy.topic020;
+package exercise.easy._020;
 
 import java.util.HashMap;
 import java.util.Stack;

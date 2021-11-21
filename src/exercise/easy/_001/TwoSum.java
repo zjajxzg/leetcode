@@ -1,4 +1,4 @@
-package exercise.easy.topic001;
+package exercise.easy._001;
 
 import java.util.Arrays;
 import java.util.HashMap;
