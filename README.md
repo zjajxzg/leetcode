@@ -14,7 +14,7 @@
 - [35. 搜索插入位置](https://leetcode-cn.com/problems/search-insert-position/) 
 - [66. 加1](https://leetcode-cn.com/problems/plus-one/)
 - [118. 杨辉三角](https://leetcode-cn.com/problems/pascals-triangle/)
-- [119. 杨辉三角2][](https://leetcode-cn.com/problems/pascals-triangle-ii/)
+- [119. 杨辉三角2](https://leetcode-cn.com/problems/pascals-triangle-ii/)
 - [1480. 一维数组的动态和](https://leetcode-cn.com/problems/running-sum-of-1d-array/) 
 #### 链表
 - [206. 反转链表](https://leetcode-cn.com/problems/reverse-linked-list/)
