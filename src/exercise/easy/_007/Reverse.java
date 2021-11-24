@@ -41,11 +41,13 @@ public class Reverse {
      * @return
      */
     public static int reverse1(int x) {
+        // 废逻辑
         if ((long) x > Integer.MAX_VALUE || (long) x < Integer.MIN_VALUE) {
             return 0;
         }
         int i = 1;
         int xx = x;
+        // 不需要
         while (true) {
             x = x / 10;
             if (x == 0) {
@@ -65,7 +67,23 @@ public class Reverse {
         return (int) z;
     }
 
+    public static int reverse2(int x) {
+        // x / 10 != 0 遍历x每一位 用long接收溢出值
+        long res = 0;
+        while (x != 0) {
+            // 取余 获取最后一位
+            res = res * 10 + x % 10;
+            if (res > Integer.MAX_VALUE || res < Integer.MIN_VALUE) {
+                return 0;
+            }
+            x /= 10;
+        }
+        return (int) res;
+    }
+
     public static void main(String[] args) {
-        System.out.println(reverse1(12));
+        int x = 1534236469;
+        System.out.println(reverse1(x));
+        System.out.println(reverse2(x));
     }
 }
