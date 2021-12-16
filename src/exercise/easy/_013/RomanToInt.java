@@ -26,9 +26,13 @@ import java.util.Map;
  */
 public class RomanToInt {
 
-    // 利用map来存储罗马字符和数字的映射关系   处理小的数在大的数左边的特殊情况
+    /**
+     * 利用map来存储罗马字符和数字的映射关系
+     * 从左到右处理 前一位 >= 后一位 直接相加即可
+     * 否则后一位减前一位 因为之前已经加过一次 减两次
+     */
     public static int romanToInt1(String s) {
-        Map<Character, Integer> map = new HashMap<>(7);
+        Map<Character, Integer> map = new HashMap<>(8);
         map.put('I', 1);
         map.put('V', 5);
         map.put('X', 10);
@@ -38,8 +42,8 @@ public class RomanToInt {
         map.put('M', 1000);
 
         int x = 0;
-        int a = 0;
-        int b = 0;
+        int a;
+        int b;
         if (s.length() == 1) {
             return map.get(s.charAt(0));
         }
@@ -47,9 +51,11 @@ public class RomanToInt {
             a = map.get(s.charAt(i));
             b = map.get(s.charAt(i + 1));
             x += a;
+            // 最后一位直接加集客
             if (i == s.length() - 2) {
                 x += b;
             }
+            // 前一位小于后一位 减2次前一位 前面已经加过一次
             if (a < b) {
                 x -= 2 * a;
             }
