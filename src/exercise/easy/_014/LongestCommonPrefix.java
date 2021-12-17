@@ -41,7 +41,7 @@ public class LongestCommonPrefix {
     }
 
     private static String twoStrCommonPrefix(String a, String b) {
-        int length = a.length() < b.length() ? a.length() : b.length();
+        int length = Math.min(a.length(), b.length());
         String result = "";
         if (length == 0) {
             return result;
