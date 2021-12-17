@@ -20,7 +20,10 @@ package exercise.easy._014;
  */
 public class LongestCommonPrefix {
 
-    //
+    /**
+     * 暴力解
+     * 两两取公共前缀 取到空为止；
+     */
     public static String longestCommonPrefix1(String[] strs) {
         String result = "";
         if (strs.length == 0) {
@@ -29,6 +32,10 @@ public class LongestCommonPrefix {
         result = strs[0];
         for (int i = 0; i < strs.length - 1; i++) {
             result = twoStrCommonPrefix(result, strs[i + 1]);
+            // 提前退出
+            if ("".equals(result)) {
+                return result;
+            }
         }
         return result;
     }
