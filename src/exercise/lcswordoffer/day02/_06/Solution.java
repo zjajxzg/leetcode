@@ -32,11 +32,7 @@ public class Solution {
             deque.push(head.val);
             head = head.next;
         }
-        if (deque.isEmpty()) {
-            return new int[]{};
-        }
         int[] arr = new int[deque.size()];
-
         for (int i = 0; i < arr.length; i++) {
             arr[i] = deque.pop();
         }
