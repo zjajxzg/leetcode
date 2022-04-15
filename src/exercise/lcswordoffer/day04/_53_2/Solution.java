@@ -51,4 +51,32 @@ public class Solution {
         // 当找到
         return left;
     }
+
+    // 二分优化 提前退出
+    public static int missingNumber3(int[] nums) {
+        int left = 0;
+        int right = nums.length - 1;
+        while (left <= right) {
+            // 防止溢出  不用(left + right) / 2
+            int mid = left + (right - left) / 2;
+            // 相等 说明在后半部分 不相等说明在前半部分
+            if (nums[mid] == mid) {
+                left = mid + 1;
+                if (left <= right && nums[left] != left) {
+                    return left;
+                }
+            } else {
+                right = mid - 1;
+                if (left <= right && nums[right] == right) {
+                    return mid;
+                }
+            }
+        }
+        // 当找到
+        return left;
+    }
+
+    public static void main(String[] args) {
+        System.out.println(missingNumber3(new int[]{0}));
+    }
 }
