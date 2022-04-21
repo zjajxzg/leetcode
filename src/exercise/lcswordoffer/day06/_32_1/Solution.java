@@ -1,4 +1,4 @@
-package exercise.lcswordoffer.day06._32;
+package exercise.lcswordoffer.day06._32_1;
 
 import common.TreeNode;
 
