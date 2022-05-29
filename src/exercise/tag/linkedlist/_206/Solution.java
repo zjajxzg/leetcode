@@ -2,8 +2,6 @@ package exercise.tag.linkedlist._206;
 
 import exercise.structure.ListNode;
 
-import java.util.List;
-
 /**
  * 反转一个单链表。
  *
