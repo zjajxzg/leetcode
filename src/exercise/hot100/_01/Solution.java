@@ -45,15 +45,14 @@ import java.util.Map;
  **/
 public class Solution {
     public int[] twoSum(int[] nums, int target) {
-        // 利用map存储结果和索引
-        Map<Integer, Integer> map = new HashMap<>();
+        Map<Integer, Integer> value2indexMap = new HashMap<>();
         for (int i = 0; i < nums.length; i++) {
-            map.put(nums[i], i);
+            value2indexMap.put(nums[i], i);
         }
         for (int i = 0; i < nums.length; i++) {
-            Integer result = map.get(target - nums[i]);
-            if (result != null && result != i) {
-                return new int[]{i, result};
+            Integer res = value2indexMap.get(target - nums[i]);
+            if (res != null && res != i) {
+                return new int[]{i, res};
             }
         }
         return new int[]{0, 0};
